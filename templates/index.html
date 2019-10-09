@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <style>
+        #gg{
+            white-space: pre-wrap;
+        }
+
+    </style>
+</head>
+<body style="background-image: url({% static 'images/01.png' %});background-size:100% 150%;" >
+
+   <form action="/ok/" method="POST">
+             {% csrf_token %}
+            <p>請輸入每一個點的權重</p>
+            <textarea id="gg" rows="10" cols="30" name="value1"></textarea><br>
+            <p>請輸入每一個邊的權重</p>
+            <textarea id="gg" rows="10" cols="30" name="value2"></textarea><br>
+            <p>請輸入起始點和目標點</p>
+            <textarea id="gg" rows="10" cols="30" name="value3"></textarea>
+            <input type="submit" value="送出">
+    </form>
+</body>
+</html>
